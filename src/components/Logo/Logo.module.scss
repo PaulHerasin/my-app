@@ -1,0 +1,10 @@
+.Logo {
+  width: 5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .Logo {
+    width: 4rem;
+  }
+}

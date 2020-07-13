@@ -1,0 +1,41 @@
+@import "../../../main";
+
+.SideDrawer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-color: $background;
+  opacity: 0;
+  transition: 1s;
+  z-index: -1;
+
+  div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  h2 {
+    color: $background2;
+    font-weight: 700;
+    font-size: 30rem;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+.Opens {
+  z-index: 200;
+  opacity: 1;
+}
+
+.NavContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}

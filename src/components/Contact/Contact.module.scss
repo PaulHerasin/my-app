@@ -1,0 +1,174 @@
+@import "../../main";
+
+.Contact {
+  padding: 5rem 0 10rem;
+  background: $black;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 4.5rem;
+    color: $light;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $light;
+  }
+
+  .Row {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .Mail,
+  .Telegram,
+  .Text {
+    padding: 0 1rem;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    img {
+      width: 7rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .Text {
+    width: 50%;
+    padding-bottom: 2rem;
+
+    p {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .Contact {
+    .Text {
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .Contact {
+    padding: 3rem 0 6rem;
+
+    h2 {
+      margin-bottom: 3rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+    }
+
+    .Mail,
+    .Telegram,
+    .Text {
+      img {
+        width: 5.5rem;
+      }
+    }
+
+    .Text {
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .Contact {
+    padding: 2rem 0 6rem;
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    .Mail,
+    .Telegram,
+    .Text {
+      img {
+        width: 4.5rem;
+      }
+    }
+
+    .Row {
+      flex-wrap: wrap;
+      max-width: 800px;
+    }
+
+    .Mail,
+    .Telegram {
+      width: 50%;
+      order: 1;
+    }
+
+    .Text {
+      width: 100%;
+      margin-bottom: 1.5rem;
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .Contact {
+    padding: 2rem 0 5rem;
+
+    p {
+      font-size: 1rem;
+    }
+
+    .Mail,
+    .Telegram,
+    .Text {
+      img {
+        width: 4rem;
+      }
+    }
+
+    .Text {
+      p {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .Contact {
+    p {
+      font-size: 1rem;
+    }
+
+    .Mail,
+    .Telegram {
+      width: 100%;
+    }
+
+    .Mail {
+      margin-bottom: 3rem;
+    }
+
+    .Text {
+      margin-bottom: 1rem;
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}

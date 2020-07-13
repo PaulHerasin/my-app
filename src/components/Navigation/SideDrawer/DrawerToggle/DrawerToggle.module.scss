@@ -1,0 +1,40 @@
+@import "../../../../main";
+
+.DrawerToggle {
+  width: 2.5rem;
+  height: 1.5rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  cursor: pointer;
+
+  div {
+    width: 100%;
+    height: 3px;
+    background-color: $dark;
+    transition: 1s;
+  }
+}
+
+.Close div {
+  &:nth-of-type(1) {
+    transform: translate(0px, 11px) rotate(45deg);
+  }
+  &:nth-of-type(2) {
+    transform: translate(0px, 0px) rotate(135deg);
+  }
+  &:nth-of-type(3) {
+    transform: translate(0px, 15px);
+  }
+}
+
+@media (max-width: 500px) {
+  .DrawerToggle {
+    width: 1.9rem;
+    height: 1.2rem;
+
+    div {
+      height: 2px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "../../../../main";
+
+.NavigationItem {
+  a {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
+  margin-bottom: 2rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}

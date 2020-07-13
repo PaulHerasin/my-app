@@ -1,0 +1,93 @@
+@import "../../../../main";
+
+.Item {
+  position: relative;
+  width: calc((100% - 4rem) / 3);
+  cursor: pointer;
+  overflow: hidden;
+  margin-bottom: 2rem;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: 5s;
+  }
+
+  img:hover {
+    transform: scale(1.5);
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 63%;
+  }
+}
+
+.Text {
+  position: absolute;
+  left: 7%;
+  bottom: 8%;
+  z-index: 2;
+
+  h3 {
+    color: $light;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    padding: 8px 7px 7px;
+    background-color: $black;
+  }
+}
+
+@media (max-width: 1350px) {
+  .Item::before {
+    padding-bottom: 70%;
+  }
+
+  .Text {
+    h3 {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .Item {
+    width: calc((100% - 2rem) / 2);
+  }
+
+  .Text {
+    h3 {
+      font-size: 2.3rem;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .Item {
+    width: calc((100% - 1.5rem) / 2);
+    margin-bottom: 1.5rem;
+  }
+
+  .Text {
+    h3 {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .Item {
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
