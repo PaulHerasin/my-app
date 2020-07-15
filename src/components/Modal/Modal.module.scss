@@ -22,3 +22,9 @@
   position: relative;
   z-index: 2;
 }
+
+@media (max-width: 767px) {
+  .Box {
+    padding: 0;
+  }
+}
