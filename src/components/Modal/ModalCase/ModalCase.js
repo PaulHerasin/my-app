@@ -44,7 +44,7 @@ const ModalCase = ({
             ].join(" ")}
           >
             <div className={styles.Box}>
-              <img src={imgFull}></img>
+              <img src={imgFull} alt="full screen"></img>
             </div>
           </div>
           <div className={styles.Content}>
@@ -58,7 +58,7 @@ const ModalCase = ({
                 <span>Completed on: </span> {date}
               </li>
               <li>
-                <img src={coffeSVG} />
+                <img src={coffeSVG} alt="" />
                 <span>Skills:</span> HTML5 / CSS3 / JS
               </li>
             </ul>
@@ -76,7 +76,7 @@ const ModalCase = ({
             )}
           >
             <div className={styles.Box}>
-              <img src={imgPad}></img>
+              <img src={imgPad} alt="pad screen"></img>
             </div>
           </div>
           <h3>Phone</h3>
@@ -86,7 +86,7 @@ const ModalCase = ({
             )}
           >
             <div className={styles.Box}>
-              <img src={imgPhone}></img>
+              <img src={imgPhone} alt="phone screen"></img>
             </div>
           </div>
         </div>

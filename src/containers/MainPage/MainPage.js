@@ -68,13 +68,13 @@ import CityFull from "../../assets/images/CityFull.png";
 import CityPad from "../../assets/images/CityPad.png";
 import CityPhone from "../../assets/images/CityPhone.png";
 
-const MainPage = (props) => {
+const MainPage = () => {
   const [cases] = useState([
     {
       id: 1,
       completed: false,
       title: "Ingenium",
-      imgMain: ingenium,
+      imgMain: ingenium, 
       imgFull: ItsFull,
       imgPad: ItsPad,
       imgPhone: ItsPhone,
