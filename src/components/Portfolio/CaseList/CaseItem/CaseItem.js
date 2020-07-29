@@ -4,11 +4,11 @@ import styles from "./CaseItem.module.scss";
 
 import { Context } from "../../../../context";
 
-const PortfolioItem = ({ title, imgMain, id }) => {
+const CaseItem = ({ title, imgMain, id }) => {
   const { openModal } = useContext(Context);
 
   return (
-    <div className={styles.Item} onClick={() => openModal(id)}>
+    <div className={styles.Item} onClick={() => [openModal(id)]}>
       <img src={imgMain} alt={"Главная картинка"}></img>
       <div className={styles.Text}>
         <h3>{title}</h3>
@@ -17,4 +17,4 @@ const PortfolioItem = ({ title, imgMain, id }) => {
   );
 };
 
-export default PortfolioItem;
+export default CaseItem;

@@ -6,6 +6,12 @@ import AboutMe from "../../components/AboutMe/AboutMe";
 import Contact from "../../components/Contact/Contact";
 import Footer from "../../components/Footer/Footer";
 import Modal from "../../components/Modal/Modal";
+import Preloader from "../../components/Preloader/Preloader";
+import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
+import ModalBackground from "../../components/UI/ModalBackground/ModalBackground";
+
+import styles from "./MainPage.module.scss";
+
 import { Context } from "../../context";
 
 import ingenium from "../../assets/images/ingenium.png";
@@ -74,7 +80,7 @@ const MainPage = () => {
       id: 1,
       completed: false,
       title: "Ingenium",
-      imgMain: ingenium, 
+      imgMain: ingenium,
       imgFull: ItsFull,
       imgPad: ItsPad,
       imgPhone: ItsPhone,
@@ -156,13 +162,14 @@ const MainPage = () => {
     {
       id: 8,
       completed: false,
-      title: "Autoparts",
-      imgMain: autoparts,
-      imgFull: AutopartsFull,
-      imgPad: AutopartsPad,
-      imgPhone: AutopartsPhone,
-      description: "компании Autoparts - магазин автозапчастей",
-      date: "27.03.2019",
+      title: "Монастик",
+      imgMain: monastic,
+      imgFull: MonasticFull,
+      imgPad: MonasticPad,
+      imgPhone: MonasticPhone,
+      description:
+        "компании Монастик. Отель Монастик СПА Отдых и оздоровление в Карпатах",
+      date: "29.11.2018",
     },
     {
       id: 9,
@@ -178,14 +185,13 @@ const MainPage = () => {
     {
       id: 10,
       completed: false,
-      title: "Монастик",
-      imgMain: monastic,
-      imgFull: MonasticFull,
-      imgPad: MonasticPad,
-      imgPhone: MonasticPhone,
-      description:
-        "компании Монастик. Отель Монастик СПА Отдых и оздоровление в Карпатах",
-      date: "29.11.2018",
+      title: "Autoparts",
+      imgMain: autoparts,
+      imgFull: AutopartsFull,
+      imgPad: AutopartsPad,
+      imgPhone: AutopartsPhone,
+      description: "компании Autoparts - магазин автозапчастей",
+      date: "27.03.2019",
     },
     {
       id: 11,
@@ -213,6 +219,10 @@ const MainPage = () => {
 
   const [modal, setModal] = useState([]);
 
+  const [scrollToCase, setscrollToCase] = useState([]);
+
+  const [modalBackground, setModalBackground] = useState(false);
+
   const openModal = (id) => {
     setModal(
       cases
@@ -224,7 +234,12 @@ const MainPage = () => {
         })
         .filter((item) => item.completed === true)
     );
-    document.body.style.overflowY = "hidden";
+
+    setscrollToCase(window.pageYOffset);
+
+    setModalBackground(true);
+
+    document.body.classList.add(styles.OpenModal);
   };
 
   const removeCases = () => {
@@ -236,15 +251,16 @@ const MainPage = () => {
         return item;
       })
     );
-    document.body.style.overflowY = "scroll";
-  };
 
-  const scrollButton = () => {
-    const clientHeight = document.documentElement.clientHeight;
-    window.scrollTo({
-      top: clientHeight,
-      behavior: "smooth",
-    });
+    setModalBackground(false);
+
+    document.body.classList.remove(styles.OpenModal);
+
+    window.scrollTo(0, scrollToCase);
+
+    window.setTimeout(function () {
+      setModal(cases.filter((item) => item.completed === true));
+    }, 1000);
   };
 
   return (
@@ -252,9 +268,11 @@ const MainPage = () => {
       value={{
         openModal,
         removeCases,
-        scrollButton,
       }}
     >
+      <ModalBackground modalBackground={modalBackground}></ModalBackground>
+      <Preloader></Preloader>
+      <Toolbar></Toolbar>
       <Modal modal={modal} completed={modal.completed}></Modal>
       <MainScreen></MainScreen>
       <AboutMe></AboutMe>

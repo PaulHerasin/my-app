@@ -1,3 +1,5 @@
+@import "../../main.scss";
+
 .MainScreen {
   background-image: url(../../assets/images/clouds-731260.jpg);
   background-repeat: no-repeat;
@@ -43,6 +45,36 @@
   }
 }
 
+.Link {
+  width: 0.7rem;
+  height: 2.5rem;
+  overflow: hidden;
+  position: absolute;
+  bottom: 3rem;
+  left: calc((100% - 0.7rem) / 2);
+  cursor: pointer;
+  transition: 0.5s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: $dark;
+    animation: button 3s infinite;
+  }
+}
+
+@keyframes button {
+  from {
+    top: -100%;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+
 @media (max-width: 1350px) {
   .MainScreenText {
     h1 {
@@ -52,6 +84,10 @@
     h2 {
       font-size: 2.7rem;
     }
+  }
+
+  .Link {
+    height: 2rem;
   }
 }
 
@@ -70,6 +106,10 @@
 @media (max-width: 767px) {
   .MainScreen {
     height: auto;
+  }
+
+  .Link {
+    display: none;
   }
 
   .MainScreenText {

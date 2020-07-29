@@ -2,8 +2,6 @@ import React from "react";
 
 import styles from "./SideDrawer.module.scss";
 
-import Container from "../../UI/Container/Container";
-
 import NavigationItems from "../NavigationItems/NavigationItems";
 
 const sideDrawer = (props) => {
@@ -15,12 +13,7 @@ const sideDrawer = (props) => {
 
   return (
     <div className={attachedClasses.join(" ")}>
-      <Container>
-        <div className={styles.NavContainer}>
-          <h2>Menu</h2>
-          <NavigationItems></NavigationItems>
-        </div>
-      </Container>
+      <NavigationItems></NavigationItems>
     </div>
   );
 };

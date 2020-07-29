@@ -1,0 +1,35 @@
+@import "../../../main";
+
+.Link {
+  display: block;
+  text-align: right;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 700;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 3px;
+    background: rgba(0, 0, 0, 0);
+    left: 45%;
+    bottom: 0;
+    transition: 0.5s;
+  }
+  &:hover {
+    &::before {
+      width: 100%;
+      left: 0%;
+      background: $black;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .Link {
+    font-size: 1.5rem;
+  }
+}

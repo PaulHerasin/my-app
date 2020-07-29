@@ -3,7 +3,6 @@ $light: #ffffff;
 $black: #000000;
 $background: #ffffff;
 $background2: #f0f0f0;
-$opacity2: #f0f0f0;
 
 * {
   font-size: 18px;
@@ -32,6 +31,10 @@ $opacity2: #f0f0f0;
     background-color: #ffffff50;
   }
 }
+
+// body::-webkit-scrollbar {
+//   width: 0px;
+// }
 
 h2 {
   font-size: 3.5rem;

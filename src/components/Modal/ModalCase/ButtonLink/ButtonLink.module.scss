@@ -1,9 +1,11 @@
+@import "../../../../main.scss";
+
 .Link {
   display: inline-block;
   cursor: pointer;
   padding: 1rem 1.5rem;
   background: rgb(0, 0, 0);
-  color: #ffffff;
+  color: $light;
   border: 1px solid rgb(255, 255, 255);
   transition: 0.5s;
 
