@@ -34,20 +34,6 @@
   }
 }
 
-.Ul {
-  display: flex;
-  flex-wrap: wrap;
-
-  li {
-    font-size: 1rem;
-    margin-right: 0.4rem;
-    margin-bottom: 0.4rem;
-    padding: 1rem;
-    color: $light;
-    background: $dark;
-  }
-}
-
 .Skills {
   li {
     text-align: left;
@@ -139,13 +125,6 @@
     }
   }
 
-  .Ul {
-    li {
-      font-size: 0.8rem;
-      padding: 0.8rem;
-    }
-  }
-
   .Skills {
     li {
       padding-left: 1.8rem;
@@ -183,12 +162,6 @@
 
     h4 {
       margin-bottom: 1.3rem;
-    }
-  }
-
-  .Ul {
-    li {
-      font-size: 0.7rem;
     }
   }
 }

@@ -4,7 +4,9 @@ import styles from "./AboutMe.module.scss";
 
 import Container from "../UI/Container/Container";
 
-const AboutMe = (props) => {
+import ListTechnologies from "./ListTechnologies/ListTechnologies";
+
+const AboutMe = () => {
   return (
     <section className={styles.AboutMe} id="aboutMe">
       <Container>
@@ -29,22 +31,7 @@ const AboutMe = (props) => {
           </div>
           <div className={styles.Column}>
             <h4>Технологии:</h4>
-            <ul className={styles.Ul}>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>JS</li>
-              <li>GIT</li>
-              <li>React</li>
-              <li>SASS</li>
-              <li>ВЕМ</li>
-              <li>JSX</li>
-              <li>Pixel Perfect</li>
-              <li>CSS Modules</li>
-              <li>Emmet</li>
-              <li>Адаптация</li>
-              <li>Кроссбраузерность</li>
-              <li>Семантическая верстка</li>
-            </ul>
+            <ListTechnologies />
           </div>
         </div>
       </Container>

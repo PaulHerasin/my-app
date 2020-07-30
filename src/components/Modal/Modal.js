@@ -21,7 +21,7 @@ const modal = ({ modal }) => {
     <div className={modalClases.join(" ")}>
       <div className={styles.Box}>
         {modal.map((item, index) => [
-          <ModalCase key={item} {...item}></ModalCase>,
+          <ModalCase key={item.id} {...item}></ModalCase>,
           <Backdrop key={index} />,
         ])}
       </div>
