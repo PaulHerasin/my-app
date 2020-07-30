@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./ListTechnologies.module.scss";
 
 const listTechnologies = () => {
-  const TEST = [
+  const TECHNOLOGIES = [
     "HTML5",
     "CSS3",
     "JS",
@@ -21,7 +21,7 @@ const listTechnologies = () => {
 
   return (
     <ul className={styles.Ul}>
-      {TEST.map((item, index) => (
+      {TECHNOLOGIES.map((item, index) => (
         <li key={index}>{item}</li>
       ))}
     </ul>

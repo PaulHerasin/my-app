@@ -5,6 +5,7 @@ import styles from "./AboutMe.module.scss";
 import Container from "../UI/Container/Container";
 
 import ListTechnologies from "./ListTechnologies/ListTechnologies";
+import ListSkills from "./ListSkills/ListSkills";
 
 const AboutMe = () => {
   return (
@@ -18,16 +19,7 @@ const AboutMe = () => {
         <div className={styles.Text}>
           <div className={styles.Column}>
             <h4>Моими умениями являются:</h4>
-            <ul className={styles.Skills}>
-              <li>
-                Верстка новых страниц из макетов <br></br> (XD,Sketch,PSD,Figma)
-              </li>
-              <li>Адаптация страниц</li>
-              <li>Кроссбраузерность</li>
-              <li>
-                Реализация JS логики <br></br> (попапы, слайдеры, анимации...)
-              </li>
-            </ul>
+            <ListSkills />
           </div>
           <div className={styles.Column}>
             <h4>Технологии:</h4>
