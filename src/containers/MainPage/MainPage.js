@@ -75,7 +75,7 @@ import CityPad from "../../assets/images/CityPad.png";
 import CityPhone from "../../assets/images/CityPhone.png";
 
 const MainPage = () => {
-  const [cases] = useState([
+  const CASES = [
     {
       id: 1,
       completed: false,
@@ -215,7 +215,7 @@ const MainPage = () => {
       description: "портфолио",
       date: "15.03.2019",
     },
-  ]);
+  ];
 
   const [modal, setModal] = useState([]);
 
@@ -225,14 +225,12 @@ const MainPage = () => {
 
   const openModal = (id) => {
     setModal(
-      cases
-        .map((item) => {
-          if (item.id === id) {
-            item.completed = true;
-          }
-          return item;
-        })
-        .filter((item) => item.completed === true)
+      CASES.map((item) => {
+        if (item.id === id) {
+          item.completed = true;
+        }
+        return item;
+      }).filter((item) => item.completed === true)
     );
 
     setscrollToCase(window.pageYOffset);
@@ -259,7 +257,7 @@ const MainPage = () => {
     window.scrollTo(0, scrollToCase);
 
     window.setTimeout(function () {
-      setModal(cases.filter((item) => item.completed === true));
+      setModal(CASES.filter((item) => item.completed === true));
     }, 1000);
   };
 
@@ -268,15 +266,16 @@ const MainPage = () => {
       value={{
         openModal,
         removeCases,
+        CASES,
       }}
     >
       <ModalBackground modalBackground={modalBackground}></ModalBackground>
       <Preloader></Preloader>
       <Toolbar></Toolbar>
-      <Modal modal={modal} completed={modal.completed}></Modal>
+      <Modal modal={modal}></Modal>
       <MainScreen></MainScreen>
       <AboutMe></AboutMe>
-      <Portfolio caseItem={cases}></Portfolio>
+      <Portfolio></Portfolio>
       <Contact></Contact>
       <Footer></Footer>
     </Context.Provider>

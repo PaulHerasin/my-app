@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../../../context";
 
 import CaseItem from "./CaseItem/CaseItem";
 
 import styles from "./CaseList.module.scss";
 
-const caseList = ({ caseItem }) => {
+const CaseList = () => {
+  const { CASES } = useContext(Context);
+
   return (
     <div className={styles.List}>
-      {caseItem.map((item) => (
+      {CASES.map((item) => (
         <CaseItem key={item.id} {...item} />
       ))}
     </div>
   );
 };
 
-export default caseList;
+export default CaseList;

@@ -8,7 +8,7 @@ const portfolio = (props) => {
   return (
     <section className={styles.Portfolio} id="portfolio">
       <h2>Мои работы</h2>
-      <CaseList caseItem={props.caseItem} />
+      <CaseList />
     </section>
   );
 };

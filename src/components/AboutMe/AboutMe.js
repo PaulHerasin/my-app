@@ -3,7 +3,6 @@ import React from "react";
 import styles from "./AboutMe.module.scss";
 
 import Container from "../UI/Container/Container";
-
 import ListTechnologies from "./ListTechnologies/ListTechnologies";
 import ListSkills from "./ListSkills/ListSkills";
 

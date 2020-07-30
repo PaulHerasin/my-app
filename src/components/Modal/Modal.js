@@ -13,7 +13,6 @@ const modal = ({ modal }) => {
     if (item.completed === true) {
       modalClases = [styles.Modal, styles.Opens];
     }
-
     return modalClases;
   });
 

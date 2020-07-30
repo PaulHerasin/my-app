@@ -17,7 +17,7 @@ const preloader = () => {
     <div className={preloaderClasses.join(" ")}>
       <img src={Logo} alt="Logo"></img>
     </div>
-  );
+  ); 
 };
 
 export default preloader;
