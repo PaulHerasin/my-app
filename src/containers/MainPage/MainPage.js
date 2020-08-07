@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import MainScreen from "../../components/MainScreen/MainScreen";
 import Portfolio from "../../components/Portfolio/Portfolio";
@@ -8,7 +8,6 @@ import Footer from "../../components/Footer/Footer";
 import Modal from "../../components/Modal/Modal";
 import Preloader from "../../components/Preloader/Preloader";
 import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
-import ModalBackground from "../../components/UI/ModalBackground/ModalBackground";
 
 import styles from "./MainPage.module.scss";
 
@@ -217,11 +216,13 @@ const MainPage = () => {
     },
   ];
 
+  const [preloader, setPreloader] = useState(true);
+
   const [modal, setModal] = useState([]);
 
   const [scrollToCase, setscrollToCase] = useState([]);
 
-  const [modalBackground, setModalBackground] = useState(false);
+  const [modalPreloader, setModalPreloader] = useState(false);
 
   const openModal = (id) => {
     setModal(
@@ -233,9 +234,9 @@ const MainPage = () => {
       }).filter((item) => item.completed === true)
     );
 
-    setscrollToCase(window.pageYOffset);
+    setModalPreloader(true);
 
-    setModalBackground(true);
+    setscrollToCase(window.pageYOffset);
 
     document.body.classList.add(styles.OpenModal);
   };
@@ -250,7 +251,7 @@ const MainPage = () => {
       })
     );
 
-    setModalBackground(false);
+    setModalPreloader(false);
 
     document.body.classList.remove(styles.OpenModal);
 
@@ -261,6 +262,12 @@ const MainPage = () => {
     }, 1000);
   };
 
+  useEffect(() => {
+    setTimeout(() => {
+      setPreloader(false);
+    }, 1000);
+  });
+
   return (
     <Context.Provider
       value={{
@@ -269,8 +276,7 @@ const MainPage = () => {
         CASES,
       }}
     >
-      <ModalBackground modalBackground={modalBackground}></ModalBackground>
-      <Preloader></Preloader>
+      {preloader || modalPreloader ? <Preloader></Preloader> : null}
       <Toolbar></Toolbar>
       <Modal modal={modal}></Modal>
       <MainScreen></MainScreen>
