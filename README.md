@@ -4,18 +4,18 @@
 
 Технологии которые использую:
 
-ReactJS
+- ReactJS
 
-ReactHooks
+- ReactHooks
 
-JSX
+- JSX
 
-JS(ES6)
+- JS(ES6)
 
-CSS, SCSS
+- CSS, SCSS
 
-CSS-module
+- CSS-module
 
-React-Redux
+- React-Redux
 
-Redux-Thunk
+- Redux-Thunk
