@@ -1,11 +1,12 @@
-import React, { useContext } from "react";
-import { Context } from "../../../context";
+import React from "react";
+import { useDispatch } from "react-redux";
 
 import styles from "./ModalCase.module.scss";
 import ButtonLink from "./ButtonLink/ButtonLink";
 
 import coffeSVG from "../../../assets/images/coffee-cup-on-a-plate-black-silhouettes.svg";
 import appointmentSVG from "../../../assets/images/appointment.svg";
+import { hideModal } from "../../../redux/actions";
 
 const ModalCase = ({
   title,
@@ -18,11 +19,10 @@ const ModalCase = ({
   date,
   link,
 }) => {
-  const { removeCases } = useContext(Context);
-
+  const dispatch = useDispatch();
   return (
     <div className={styles.ModalCase}>
-      <div className={styles.Close} onClick={() => removeCases(completed)}>
+      <div className={styles.Close} onClick={() => dispatch(hideModal())}>
         <div></div>
         <div></div>
       </div>

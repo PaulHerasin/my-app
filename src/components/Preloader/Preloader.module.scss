@@ -7,10 +7,11 @@
   width: 100%;
   height: 100%;
   background: $background2;
-  z-index: 999;
+  z-index: -1;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
 
   img {
     width: 10rem;
@@ -25,11 +26,8 @@
   }
 }
 
-.LoadedHiding .Preloader {
-  transition: 0.5s 1.5s;
-  opacity: 0;
-}
-
-.Loaded .Preloader {
-  display: none;
+.Opens {
+  transition: 0.5s;
+  z-index: 1000;
+  opacity: 1;
 }

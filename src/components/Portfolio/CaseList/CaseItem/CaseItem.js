@@ -1,19 +1,16 @@
-import React, { useContext } from "react";
+import React from "react";
+
+import { useDispatch } from "react-redux";
+
+import { showModal } from "../../../../redux/actions";
 
 import styles from "./CaseItem.module.scss";
 
-import { Context } from "../../../../context";
-
 const CaseItem = ({ title, imgMain, id }) => {
-  const { openModal } = useContext(Context);
+  const dispatch = useDispatch();
 
   return (
-    <div
-      className={styles.Item}
-      onClick={() => {
-        openModal(id);
-      }}
-    >
+    <div className={styles.Item} onClick={() => dispatch(showModal(id))}>
       <img src={imgMain} alt={"Главная картинка"}></img>
       <div className={styles.Text}>
         <h3>{title}</h3>

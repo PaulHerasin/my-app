@@ -4,7 +4,7 @@ import CaseList from "./CaseList/CaseList";
 
 import styles from "./Portfolio.module.scss";
 
-const portfolio = (props) => {
+const portfolio = () => {
   return (
     <section className={styles.Portfolio} id="portfolio">
       <h2>Мои работы</h2>

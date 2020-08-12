@@ -1,15 +1,19 @@
 import React from "react";
-
+import { useSelector } from "react-redux";
 import styles from "./Modal.module.scss";
 
 import ModalCase from "./ModalCase/ModalCase";
 
 import Backdrop from "../UI/Backdrop/Backdrop";
 
-const modal = ({ modal }) => {
+const Modal = () => {
+  const showModal = useSelector((state) => {
+    return state.works.modal;
+  });
+
   let modalClases = [styles.Modal];
 
-  modal.map((item) => {
+  showModal.map((item) => {
     if (item.completed === true) {
       modalClases = [styles.Modal, styles.Opens];
     }
@@ -19,7 +23,7 @@ const modal = ({ modal }) => {
   return (
     <div className={modalClases.join(" ")}>
       <div className={styles.Box}>
-        {modal.map((item, index) => [
+        {showModal.map((item, index) => [
           <ModalCase key={item.id} {...item}></ModalCase>,
           <Backdrop key={index} />,
         ])}
@@ -28,4 +32,4 @@ const modal = ({ modal }) => {
   );
 };
 
-export default modal;
+export default Modal;
