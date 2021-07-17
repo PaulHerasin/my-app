@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
 import MainPage from "./containers/MainPage/MainPage";
 
+window.LARGE_TABLET = 1024
+
 function App() {
   return (
-    <div>
-      <MainPage></MainPage>
-    </div>
+    <MainPage></MainPage>
   );
 }
 

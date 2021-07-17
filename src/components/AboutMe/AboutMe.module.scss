@@ -1,130 +1,133 @@
-@import "../../main";
+@import '../../main';
 
 .AboutMe {
-  padding: 9rem 0;
+	padding: 9rem 0;
 
-  h2 {
-    margin-bottom: 3.5rem;
-    text-align: center;
-  }
+	.Title {
+		margin-bottom: 2.5rem;
+		text-align: center;
+	}
 
-  h4 {
-    margin: 0 auto;
-    max-width: 55rem;
-    font-size: 1.8rem;
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 5rem;
-  }
+	h4 {
+		font-size: 1.8rem;
+		font-weight: 500;
+	}
+
+	.TitleText {
+		margin: 0 auto;
+		max-width: 55rem;
+		text-align: center;
+		margin-bottom: 5rem;
+	}
 }
 
 .Text {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 
-  .Column {
-    width: calc((100% - 2.5rem) / 2);
-    h4 {
-      text-align: left;
-    }
-  }
+	.Column {
+		width: calc((100% - 2.5rem) / 2);
+		h4 {
+			text-align: left;
+		}
+	}
 
-  h4 {
-    margin-bottom: 1.8rem;
-  }
+	.ColumnTitle {
+		margin-bottom: 1.8rem;
+	}
 }
 
 @media (max-width: 1250px) {
-  .AboutMe {
-    padding: 8rem 0 5rem;
+	.AboutMe {
+		padding: 8rem 0 5rem;
 
-    h2 {
-      margin-bottom: 3rem;
-    }
+		.Title {
+			margin-bottom: 3rem;
+		}
 
-    h4 {
-      font-size: 1.7rem;
-      margin-bottom: 4.5rem;
-    }
-  }
+		.TitleText {
+			font-size: 1.7rem;
+			margin-bottom: 4.5rem;
+		}
+	}
 
-  .Text {
-    h4 {
-      margin-bottom: 1.8rem;
-    }
-  }
+	.Text {
+		.ColumnTitle {
+			margin-bottom: 1.8rem;
+		}
+	}
 }
 
 @media (max-width: 991px) {
-  .AboutMe {
-    padding: 7rem 0 3rem;
+	.AboutMe {
+		padding: 7rem 0 3rem;
 
-    h2 {
-      margin-bottom: 2.5rem;
-    }
+		.Title {
+			margin-bottom: 2.5rem;
+		}
 
-    h4 {
-      font-size: 1.6rem;
-      margin-bottom: 4rem;
-    }
-  }
+		.TitleText {
+			font-size: 1.6rem;
+			margin-bottom: 4rem;
+		}
+	}
 
-  .Text {
-    h4 {
-      margin-bottom: 1.8rem;
-    }
-  }
+	.Text {
+		.ColumnTitle {
+			margin-bottom: 1.8rem;
+		}
+	}
 }
 
 @media (max-width: 767px) {
-  .AboutMe {
-    padding: 3.5rem 0 2.5rem;
+	.AboutMe {
+		padding: 3.5rem 0 2.5rem;
 
-    h4 {
-      font-size: 1.3rem;
-      margin-bottom: 3rem;
-    }
-  }
+		.TitleText {
+			font-size: 1.3rem;
+			margin-bottom: 3rem;
+		}
+	}
 
-  .Text {
-    flex-direction: column;
+	.Text {
+		flex-direction: column;
 
-    .Column {
-      width: 100%;
+		.Column {
+			width: 100%;
 
-      &:first-of-type {
-        margin-bottom: 3rem;
-      }
-    }
+			&:first-of-type {
+				margin-bottom: 3rem;
+			}
+		}
 
-    h4 {
-      margin-bottom: 1.3rem;
-    }
-  }
+		.ColumnTitle {
+			margin-bottom: 1.3rem;
+		}
+	}
 }
 
 @media (max-width: 500px) {
-  .AboutMe {
-    h2 {
-      margin-bottom: 2rem;
-    }
+	.AboutMe {
+		.Title {
+			margin-bottom: 2rem;
+		}
 
-    h4 {
-      text-align: left;
-      font-size: 1rem;
-      margin-bottom: 2rem;
-    }
-  }
+		.TitleText {
+			text-align: left;
+			font-size: 1rem;
+			margin-bottom: 2rem;
+		}
+	}
 
-  .Text {
-    .Column {
-      &:first-of-type {
-        margin-bottom: 2rem;
-      }
-    }
+	.Text {
+		.Column {
+			&:first-of-type {
+				margin-bottom: 2rem;
+			}
+		}
 
-    h4 {
-      margin-bottom: 1.3rem;
-    }
-  }
+		.ColumnTitle {
+			margin-bottom: 1.3rem;
+		}
+	}
 }

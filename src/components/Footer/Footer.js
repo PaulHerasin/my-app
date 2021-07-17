@@ -7,7 +7,7 @@ import Container from "../UI/Container/Container";
 const footer = () => (
   <footer className={styles.Footer}>
     <Container>
-      <p>© 2020 Павел Герасин</p>
+      <p>© 2021 Павел Герасин</p>
     </Container>
   </footer>
 );

@@ -1,67 +1,70 @@
-@import "../../main";
+@import '../../main';
 
 .Portfolio {
-  padding: 12rem 0 5rem;
-  background: $black;
-  position: relative;
+	padding: 12rem 0 5rem;
+	background: $black;
+	position: relative;
 
-  h2 {
-    color: $light;
-    margin-bottom: 7rem;
-    text-align: center;
-  }
+	.Title {
+		margin-bottom: 7rem;
+	}
 
-  &::before {
-    z-index: 2;
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: 0;
-    width: 100%;
-    height: 10rem;
-    clip-path: polygon(100% 0%, 0 0%, 100% 100%);
-    background: $light;
-  }
+	h2 {
+		color: $light;
+		text-align: center;
+	}
+
+	&::before {
+		z-index: 2;
+		content: '';
+		position: absolute;
+		top: -1px;
+		left: 0;
+		width: 100%;
+		height: 10rem;
+		clip-path: polygon(100% 0%, 0 0%, 100% 100%);
+		background: $light;
+	}
 }
 
 @media (max-width: 1250px) {
-  .Portfolio {
-    padding: 8rem 0 5rem;
+	.Portfolio {
+		padding: 8rem 0 5rem;
 
-    h2 {
-      margin-bottom: 4rem;
-    }
+		.Title {
+			margin-bottom: 4rem;
+		}
 
-    &::before {
-      height: 6rem;
-    }
-  }
+		&::before {
+			height: 6rem;
+		}
+	}
 }
 
 @media (max-width: 767px) {
-  .Portfolio {
-    padding: 5rem 0 2rem;
+	.Portfolio {
+		padding: 5rem 0 2rem;
 
-    h2 {
-      margin-bottom: 3rem;
-    }
+		.Title {
+			margin-bottom: 3rem;
+		}
 
-    &::before {
-      height: 4rem;
-    }
-  }
+		&::before {
+			height: 4rem;
+		}
+	}
 }
 
 @media (max-width: 500px) {
-  .Portfolio {
-    padding: 3rem 0;
+	.Portfolio {
+		padding: 3rem 0;
 
-    h2 {
-      margin-bottom: 2.5rem;
-    }
+		.Title {
+			margin-bottom: 2.5rem;
+		}
 
-    &::before {
-      height: 2rem;
-    }
-  }
+		&::before {
+			height: 2rem;
+		}
+	}
 }
