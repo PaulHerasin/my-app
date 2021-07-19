@@ -1,6 +1,6 @@
 ---
 deployment:
-tasks:
-  - export DEPLOYPATH=/home2/pavelpo1/repositories
-  - /bin/cp -R build $DEPLOYPATH
-# - /bin/cp имя_файла_в_репозитории $DEPLOYPATH
+  tasks:
+    - export REPOPATH=/home2/pavelpo1/repositories/build/*
+    - export SITEPATH=/home2/pavelpo1/public_html/
+    - /bin/rsync -rav --exclude '.git' --exclude '.cpanel.yml' --del $REPOPATH $SITEPATH
