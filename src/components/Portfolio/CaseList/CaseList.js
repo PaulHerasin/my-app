@@ -30,7 +30,7 @@ const CaseList = () => {
             start: 'top bottom',
           },
         })
-      }, 500);
+      }, 1500);
     }
   })
 

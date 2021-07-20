@@ -24,7 +24,7 @@ const Portfolio = () => {
             start: 'top bottom',
           },
         })
-      }, 500);
+      }, 1500);
     }
   })
 

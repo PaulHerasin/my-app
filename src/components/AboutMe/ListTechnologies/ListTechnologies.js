@@ -38,7 +38,7 @@ const ListTechnologies = () => {
             start: 'top bottom',
           },
         })
-      }, 500);
+      }, 1500);
     }
   })
 
