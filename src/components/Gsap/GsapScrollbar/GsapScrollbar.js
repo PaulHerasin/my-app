@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { gsap } from "gsap";
-import Scrollbar from 'smooth-scrollbar';
-import { ScrollTrigger } from "gsap/ScrollTrigger"
+// import { gsap } from "gsap";
+// import Scrollbar from 'smooth-scrollbar';
+// import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 const GsapScrollbar = (props) => {
   useEffect(() => {

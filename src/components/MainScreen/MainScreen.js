@@ -56,27 +56,30 @@ const MainScreen = () => {
   // }
 
   useEffect(() => {
-    gsap.fromTo([`.${styles.Text} h1`, `.${styles.Text} h2`], {
-      y: "100%",
-      duration: 0,
-    }, {
-      y: "0%",
-      stagger: {
-        each: 0.5
-      },
-      duration: 1,
-      delay: 4.5
-    })
+    if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
+      gsap.fromTo([`.${styles.Text} h1`, `.${styles.Text} h2`], {
+        y: "100%",
+        duration: 0,
+      }, {
+        y: "0%",
+        stagger: {
+          each: 0.5
+        },
+        duration: 1,
+        delay: 4.5
+      })
 
-    gsap.fromTo(`.${styles.Background}`, {
-      scale: 1.2,
-      duration: 0,
-    }, {
-      scale: 1,
-      duration: 4,
-      delay: 3.5
-    })
+      gsap.fromTo(`.${styles.Background}`, {
+        scale: 1.2,
+        duration: 0,
+      }, {
+        scale: 1,
+        duration: 4,
+        delay: 3.5
+      })
+    }
   })
+
 
   return (
     <section className={styles.MainScreen}>
