@@ -15,25 +15,23 @@ const ListSkills = () => {
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
-      setTimeout(() => {
-        gsap.fromTo(`.${styles.Skills} li`, {
-          y: "100%",
-          duration: 0,
-          opacity: 0,
-        }, {
-          y: "0%",
-          opacity: 1,
-          duration: 1,
-          delay: 1,
-          stagger: {
-            amount: 2
-          },
-          scrollTrigger: {
-            trigger: `.${styles.Skills}`,
-            start: 'top bottom',
-          },
-        })
-      }, 1500);
+      gsap.fromTo(`.${styles.Skills} li`, {
+        y: "100%",
+        duration: 0,
+        opacity: 0,
+      }, {
+        y: "0%",
+        opacity: 1,
+        duration: 1,
+        delay: 1,
+        stagger: {
+          amount: 2
+        },
+        scrollTrigger: {
+          trigger: `.${styles.Skills}`,
+          start: 'top bottom',
+        },
+      })
     }
   })
 

@@ -14,23 +14,21 @@ const CaseList = () => {
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
-      setTimeout(() => {
-        gsap.fromTo(`.${styles.List} > div`, {
-          y: 100,
-          duration: 0,
-          opacity: 0,
-        }, {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          delay: 1,
-          stagger: 0.5,
-          scrollTrigger: {
-            trigger: `.${styles.List}`,
-            start: 'top bottom',
-          },
-        })
-      }, 1500);
+      gsap.fromTo(`.${styles.List} > div`, {
+        y: 100,
+        duration: 0,
+        opacity: 0,
+      }, {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        delay: 1,
+        stagger: 0.5,
+        scrollTrigger: {
+          trigger: `.${styles.List}`,
+          start: 'top bottom',
+        },
+      })
     }
   })
 

@@ -15,44 +15,45 @@ const AboutMe = () => {
 
     if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
       setTimeout(() => {
-        gsap.fromTo(`.${styles.AboutMe} h2`, {
-          y: "100%",
-          duration: 0,
-        }, {
-          y: "0%",
-          duration: 1,
-          scrollTrigger: {
-            trigger: `.${styles.AboutMe} h2`,
-            start: 'top bottom',
-          },
-        })
-        gsap.fromTo(`.${styles.TitleText}`, {
-          y: 100,
-          opacity: 0,
-          duration: 0,
-        }, {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          scrollTrigger: {
-            trigger: `.${styles.TitleText}`,
-            start: 'top bottom',
-          },
-        })
-        gsap.fromTo(`.${styles.ColumnTitle} h4`, {
-          y: 100,
-          opacity: 0,
-          duration: 0,
-        }, {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          scrollTrigger: {
-            trigger: `.${styles.ColumnTitle} h4`,
-            start: 'top bottom',
-          },
-        })
-      }, 1500);
+        ScrollTrigger.refresh()
+      }, 1500)
+      gsap.fromTo(`.${styles.AboutMe} h2`, {
+        y: "100%",
+        duration: 0,
+      }, {
+        y: "0%",
+        duration: 1,
+        scrollTrigger: {
+          trigger: `.${styles.AboutMe} h2`,
+          start: 'top bottom',
+        },
+      })
+      gsap.fromTo(`.${styles.TitleText}`, {
+        y: 100,
+        opacity: 0,
+        duration: 0,
+      }, {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: `.${styles.TitleText}`,
+          start: 'top bottom',
+        },
+      })
+      gsap.fromTo(`.${styles.ColumnTitle} h4`, {
+        y: 100,
+        opacity: 0,
+        duration: 0,
+      }, {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: `.${styles.ColumnTitle} h4`,
+          start: 'top bottom',
+        },
+      })
     }
   })
 

@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.43321880.chunk.css",
-    "main.js": "/static/js/main.263f4b63.chunk.js",
-    "main.js.map": "/static/js/main.263f4b63.chunk.js.map",
+    "main.js": "/static/js/main.d1c471f7.chunk.js",
+    "main.js.map": "/static/js/main.d1c471f7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.f8c5b4be.js",
     "runtime-main.js.map": "/static/js/runtime-main.f8c5b4be.js.map",
-    "static/js/2.defa6b15.chunk.js": "/static/js/2.defa6b15.chunk.js",
-    "static/js/2.defa6b15.chunk.js.map": "/static/js/2.defa6b15.chunk.js.map",
+    "static/js/2.2926652e.chunk.js": "/static/js/2.2926652e.chunk.js",
+    "static/js/2.2926652e.chunk.js.map": "/static/js/2.2926652e.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.3a169619744ad74fbe215ff6a7afad99.js": "/precache-manifest.3a169619744ad74fbe215ff6a7afad99.js",
+    "precache-manifest.e2a8b77a01a77b2c00d568e3ecfb1ecb.js": "/precache-manifest.e2a8b77a01a77b2c00d568e3ecfb1ecb.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.43321880.chunk.css.map": "/static/css/main.43321880.chunk.css.map",
-    "static/js/2.defa6b15.chunk.js.LICENSE.txt": "/static/js/2.defa6b15.chunk.js.LICENSE.txt",
+    "static/js/2.2926652e.chunk.js.LICENSE.txt": "/static/js/2.2926652e.chunk.js.LICENSE.txt",
     "static/media/AutogisFull.png": "/static/media/AutogisFull.31538317.png",
     "static/media/AutogisPad.png": "/static/media/AutogisPad.250f1900.png",
     "static/media/AutogisPhone.png": "/static/media/AutogisPhone.8e91a0c4.png",
@@ -60,8 +60,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f8c5b4be.js",
-    "static/js/2.defa6b15.chunk.js",
+    "static/js/2.2926652e.chunk.js",
     "static/css/main.43321880.chunk.css",
-    "static/js/main.263f4b63.chunk.js"
+    "static/js/main.d1c471f7.chunk.js"
   ]
 }

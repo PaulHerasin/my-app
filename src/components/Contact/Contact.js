@@ -16,45 +16,43 @@ const Contact = () => {
   useEffect(() => {
 
     if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
-      setTimeout(() => {
-        gsap.fromTo(`.${styles.title} h2`, {
-          y: "100%",
-          duration: 0,
-        }, {
-          y: "0%",
-          duration: 1,
-          scrollTrigger: {
-            trigger: `.${styles.title} h2`,
-            start: 'top 75%',
-          },
-        })
-        gsap.fromTo(`.${styles.text}`, {
-          y: 100,
-          opacity: 0,
-          duration: 0,
-        }, {
-          y: 0,
-          opacity: 1,
-          duration: 1.5,
-          scrollTrigger: {
-            trigger: `.${styles.text}`,
-            start: 'top 75%',
-          },
-        })
-        gsap.fromTo([`.${styles.mail}`, `.${styles.telegram}`], {
-          y: 50,
-          opacity: 0,
-          duration: 0,
-        }, {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          scrollTrigger: {
-            trigger: `.${styles.text}`,
-            start: 'top 75%',
-          },
-        })
-      }, 1500);
+      gsap.fromTo(`.${styles.title} h2`, {
+        y: "100%",
+        duration: 0,
+      }, {
+        y: "0%",
+        duration: 1,
+        scrollTrigger: {
+          trigger: `.${styles.title} h2`,
+          start: 'top 75%',
+        },
+      })
+      gsap.fromTo(`.${styles.text}`, {
+        y: 100,
+        opacity: 0,
+        duration: 0,
+      }, {
+        y: 0,
+        opacity: 1,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: `.${styles.text}`,
+          start: 'top 75%',
+        },
+      })
+      gsap.fromTo([`.${styles.mail}`, `.${styles.telegram}`], {
+        y: 50,
+        opacity: 0,
+        duration: 0,
+      }, {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: `.${styles.text}`,
+          start: 'top 75%',
+        },
+      })
     }
   })
 

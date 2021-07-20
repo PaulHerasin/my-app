@@ -12,19 +12,17 @@ const Portfolio = () => {
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     if (document.querySelector('body').clientWidth > window.LARGE_TABLET) {
-      setTimeout(() => {
-        gsap.fromTo(`.${styles.Title} h2`, {
-          y: "100%",
-          duration: 0,
-        }, {
-          y: "0%",
-          duration: 1,
-          scrollTrigger: {
-            trigger: `.${styles.Title} h2`,
-            start: 'top bottom',
-          },
-        })
-      }, 1500);
+      gsap.fromTo(`.${styles.Title} h2`, {
+        y: "100%",
+        duration: 0,
+      }, {
+        y: "0%",
+        duration: 1,
+        scrollTrigger: {
+          trigger: `.${styles.Title} h2`,
+          start: 'top bottom',
+        },
+      })
     }
   })
 
