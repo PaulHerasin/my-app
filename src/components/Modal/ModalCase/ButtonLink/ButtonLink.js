@@ -10,7 +10,7 @@ const buttonLink = (props) => {
         rel="noopener noreferrer"
         className={styles.Link}
       >
-        Перейти на сайт
+        {props.children}
       </a>
     );
   } else {

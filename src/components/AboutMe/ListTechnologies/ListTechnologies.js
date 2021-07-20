@@ -34,11 +34,11 @@ const ListTechnologies = () => {
             amount: 2
           },
           scrollTrigger: {
-            trigger: `.${styles.List} li`,
+            trigger: `.${styles.List}`,
             start: 'top bottom',
           },
         })
-      });
+      }, 500);
     }
   })
 

@@ -1,11 +1,16 @@
-import { HIDE_LOADER, SHOW_LOADER } from "./types";
+import { SHOW_PRELOADER, HIDE_PRELOADER, SHOW_LOADER, HIDE_LOADER } from "./types";
 
 const initialState = {
-  loading: true,
+  preloading: true,
+  loading: false,
 };
 
 export const appReducer = (state = initialState, action) => {
   switch (action.type) {
+    case SHOW_PRELOADER:
+      return { ...state, preloading: true };
+    case HIDE_PRELOADER:
+      return { ...state, preloading: false };
     case SHOW_LOADER:
       return { ...state, loading: true };
     case HIDE_LOADER:

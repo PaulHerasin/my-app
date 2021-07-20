@@ -1,4 +1,3 @@
-// import ingenium from "../assets/images/ingenium.png";
 import ingenium from "../assets/images/ingenium.png";
 import ItsFull from "../assets/images/ITS.png";
 import ItsPad from "../assets/images/ItsPad.png";
@@ -29,11 +28,6 @@ import MainingFull from "../assets/images/MainingFull.png";
 import MainingPad from "../assets/images/MainingPad.png";
 import MainingPhone from "../assets/images/MainingPhone.png";
 
-import business from "../assets/images/business.png";
-import BusinessFull from "../assets/images/BusinessFull.png";
-import BusinessPad from "../assets/images/BusinessPad.png";
-import BusinessPhone from "../assets/images/BusinessPhone.png";
-
 import autoparts from "../assets/images/autoparts.png";
 import AutopartsFull from "../assets/images/AutopartsFull.png";
 import AutopartsPad from "../assets/images/AutopartsPad.png";
@@ -49,15 +43,6 @@ import MonasticFull from "../assets/images/MonasticFull.png";
 import MonasticPad from "../assets/images/MonasticPad.png";
 import MonasticPhone from "../assets/images/MonasticPhone.png";
 
-import preechal from "../assets/images/preechal.png";
-import PreechalFull from "../assets/images/PreechalFull.png";
-import PreechalPad from "../assets/images/PreechalPad.png";
-import PreechalPhone from "../assets/images/PreechalPhone.png";
-
-import city from "../assets/images/city.png";
-import CityFull from "../assets/images/CityFull.png";
-import CityPad from "../assets/images/CityPad.png";
-import CityPhone from "../assets/images/CityPhone.png";
 import { SHOW_MODAL, HIDE_MODAL, POSITION_MODAL, CLEAN_MODAL } from "./types";
 
 const initialState = {
@@ -74,6 +59,7 @@ const initialState = {
         "компании Salebot, создает чат-боты для ключевых бизнес-процессов",
       date: "25.05.2019",
       link: "https://salebot.pro/",
+      git: "https://github.com/Toppavel23/salebot",
     },
     {
       id: 2,
@@ -87,6 +73,7 @@ const initialState = {
         "компании Balzar, которая производит автозапчасти из резины премиум качества в городе Балаково с 1993 года.",
       date: "11.06.2019",
       link: "https://balzap.ru/",
+      git: "https://github.com/Toppavel23/balzar",
     },
     {
       id: 3,
@@ -98,6 +85,7 @@ const initialState = {
       imgPhone: OsipovPhone,
       description: "поддержки и продвижения Петра Осипова в Киеве.",
       date: "16.11.2018",
+      git: "https://github.com/Toppavel23/Osipov",
     },
     {
       id: 4,
@@ -110,7 +98,7 @@ const initialState = {
       description:
         "компании Ingenium по перевозкам грузов по России, Европе и Снг.",
       date: "15.05.2019",
-      link: "https://its-l.ru/",
+      git: "https://github.com/Toppavel23/Ingenium",
     },
     {
       id: 5,
@@ -122,6 +110,7 @@ const initialState = {
       imgPhone: BalletPhone,
       description: "компании АЛБ - академия любительского балета",
       date: "01.05.2019",
+      git: "https://github.com/Toppavel23/Ballet",
     },
     {
       id: 6,
@@ -133,20 +122,10 @@ const initialState = {
       imgPhone: MainingPhone,
       description: "компании ICrypto World",
       date: "06.06.2019",
+      git: "https://github.com/Toppavel23/Maining",
     },
-    // {
-    //   id: 7,
-    //   completed: false,
-    //   title: "Бизнес школа",
-    //   imgMain: business,
-    //   imgFull: BusinessFull,
-    //   imgPad: BusinessPad,
-    //   imgPhone: BusinessPhone,
-    //   description: "продвижения Онлайн Бизнес Школы ",
-    //   date: "27.06.2019",
-    // },
     {
-      id: 8,
+      id: 7,
       completed: false,
       title: "Монастик",
       imgMain: monastic,
@@ -156,9 +135,10 @@ const initialState = {
       description:
         "компании Монастик. Отель Монастик СПА Отдых и оздоровление в Карпатах",
       date: "29.11.2018",
+      git: "https://github.com/Toppavel23/landingSvetlana",
     },
     {
-      id: 9,
+      id: 8,
       completed: false,
       title: "Autogis",
       imgMain: autogis,
@@ -167,9 +147,10 @@ const initialState = {
       imgPhone: AutogisPhone,
       description: "компании Autogis - мобильный помощник водителя",
       date: "19.08.2019",
+      git: "https://github.com/Toppavel23/AUTOGIS",
     },
     {
-      id: 10,
+      id: 9,
       completed: false,
       title: "Autoparts",
       imgMain: autoparts,
@@ -178,29 +159,8 @@ const initialState = {
       imgPhone: AutopartsPhone,
       description: "компании Autoparts - магазин автозапчастей",
       date: "27.03.2019",
+      git: "https://github.com/Toppavel23/Car-project",
     },
-    // {
-    //   id: 11,
-    //   completed: false,
-    //   title: "Preechal",
-    //   imgMain: preechal,
-    //   imgFull: PreechalFull,
-    //   imgPad: PreechalPad,
-    //   imgPhone: PreechalPhone,
-    //   description: "портфолио",
-    //   date: "02.03.2019",
-    // },
-    // {
-    //   id: 12,
-    //   completed: false,
-    //   title: "City",
-    //   imgMain: city,
-    //   imgFull: CityFull,
-    //   imgPad: CityPad,
-    //   imgPhone: CityPhone,
-    //   description: "портфолио",
-    //   date: "15.03.2019",
-    // },
   ],
   modal: [],
   positionModal: 0,

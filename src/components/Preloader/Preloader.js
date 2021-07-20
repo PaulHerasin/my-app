@@ -4,19 +4,32 @@ import styles from "./Preloader.module.scss";
 import Logo from "../../assets/images/logo.svg";
 
 const Preloader = () => {
+  const preloading = useSelector((state) => {
+    return state.app.preloading;
+  });
+
+  let attachedClasses = [styles.preloader];
+
+  if (!preloading) {
+    attachedClasses = [styles.preloader, styles.hide];
+  }
+
   const loading = useSelector((state) => {
     return state.app.loading;
   });
 
-  let attachedClasses = [styles.Preloader];
-
   if (loading) {
-    attachedClasses = [styles.Preloader, styles.Opens];
+    attachedClasses = [styles.preloader, styles.showLoader];
   }
 
   return (
     <div className={attachedClasses.join(" ")}>
-      <img src={Logo} alt="Logo"></img>
+      <div className={styles.center}>
+        <img src={Logo} alt="Logo"></img>
+        <div className={styles.line}>
+          <div className={styles.loading}></div>
+        </div>
+      </div>
     </div>
   );
 };

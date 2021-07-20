@@ -1,198 +1,201 @@
-@import "../../main";
+@import '../../main';
 
-.Contact {
-  padding: 5rem 0 10rem;
-  background: $black;
+.contact {
+	padding: 5rem 0 10rem;
+	background: $black;
 
-  h2 {
-    text-align: center;
-    margin-bottom: 4.5rem;
-    color: $light;
-  }
+	.title {
+		margin-bottom: 4.5rem;
+	}
 
-  a,
-  p {
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: $light;
-  }
+	h2 {
+		text-align: center;
+		color: $light;
+	}
 
-  .Row {
-    display: flex;
-    justify-content: space-evenly;
-  }
+	a,
+	p {
+		font-size: 1.3rem;
+		font-weight: 500;
+		color: $light;
+	}
 
-  .Mail,
-  .Telegram,
-  .Text {
-    padding: 0 1rem;
-    width: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
+	.row {
+		display: flex;
+		justify-content: space-evenly;
+	}
 
-    img {
-      width: 7rem;
-      margin-bottom: 2rem;
-    }
-  }
+	.mail,
+	.telegram,
+	.text {
+		padding: 0 1rem;
+		width: 25%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
 
-  .MailLink,
-  .TelegramLink {
-    p {
-      position: relative;
-      padding-bottom: 8px;
+		img {
+			width: 7rem;
+			margin-bottom: 2rem;
+		}
+	}
 
-      &::before {
-        content: "";
-        position: absolute;
-        width: 10%;
-        height: 3px;
-        background: rgba(255, 255, 255, 0);
-        left: 45%;
-        bottom: 0;
-        transition: 0.5s;
-      }
-    }
+	.mailLink,
+	.telegramLink {
+		p {
+			position: relative;
+			padding-bottom: 8px;
 
-    &:hover {
-      p::before {
-        width: 100%;
-        left: 0%;
-        background: $light;
-      }
-    }
-  }
+			&::before {
+				content: '';
+				position: absolute;
+				width: 10%;
+				height: 3px;
+				background: rgba(255, 255, 255, 0);
+				left: 45%;
+				bottom: 0;
+				transition: 0.5s;
+			}
+		}
 
-  .Text {
-    width: 50%;
-    padding-bottom: 2rem;
+		&:hover {
+			p::before {
+				width: 100%;
+				left: 0%;
+				background: $light;
+			}
+		}
+	}
 
-    p {
-      font-size: 2rem;
-    }
-  }
+	.text {
+		width: 50%;
+		padding-bottom: 2rem;
+
+		p {
+			font-size: 2rem;
+		}
+	}
 }
 
 @media (max-width: 1350px) {
-  .Contact {
-    .Text {
-      p {
-        font-size: 1.8rem;
-      }
-    }
-  }
+	.contact {
+		.text {
+			p {
+				font-size: 1.8rem;
+			}
+		}
+	}
 }
 
 @media (max-width: 1250px) {
-  .Contact {
-    padding: 3rem 0 6rem;
+	.contact {
+		padding: 3rem 0 6rem;
 
-    h2 {
-      margin-bottom: 3rem;
-    }
+		.title {
+			margin-bottom: 3rem;
+		}
 
-    p {
-      font-size: 1rem;
-    }
+		p {
+			font-size: 1rem;
+		}
 
-    .Mail,
-    .Telegram,
-    .Text {
-      img {
-        width: 5.5rem;
-      }
-    }
+		.mail,
+		.telegram,
+		.text {
+			img {
+				width: 5.5rem;
+			}
+		}
 
-    .Text {
-      p {
-        font-size: 1.5rem;
-      }
-    }
-  }
+		.text {
+			p {
+				font-size: 1.5rem;
+			}
+		}
+	}
 }
 
 @media (max-width: 991px) {
-  .Contact {
-    padding: 2rem 0 6rem;
+	.contact {
+		padding: 2rem 0 6rem;
 
-    p {
-      font-size: 1.2rem;
-    }
+		p {
+			font-size: 1.2rem;
+		}
 
-    .Mail,
-    .Telegram,
-    .Text {
-      img {
-        width: 4.5rem;
-      }
-    }
+		.mail,
+		.telegram,
+		.text {
+			img {
+				width: 4.5rem;
+			}
+		}
 
-    .Row {
-      flex-wrap: wrap;
-      max-width: 800px;
-    }
+		.row {
+			flex-wrap: wrap;
+			max-width: 800px;
+		}
 
-    .Mail,
-    .Telegram {
-      width: 50%;
-      order: 1;
-    }
+		.mail,
+		.telegram {
+			width: 50%;
+			order: 1;
+		}
 
-    .Text {
-      width: 100%;
-      margin-bottom: 1.5rem;
+		.text {
+			width: 100%;
+			margin-bottom: 1.5rem;
 
-      p {
-        font-size: 1.5rem;
-      }
-    }
-  }
+			p {
+				font-size: 1.5rem;
+			}
+		}
+	}
 }
 
 @media (max-width: 767px) {
-  .Contact {
-    padding: 2rem 0 5rem;
+	.contact {
+		padding: 2rem 0 5rem;
 
-    p {
-      font-size: 1rem;
-    }
+		p {
+			font-size: 1rem;
+		}
 
-    .Mail,
-    .Telegram,
-    .Text {
-      img {
-        width: 4rem;
-      }
-    }
+		.mail,
+		.telegram,
+		.text {
+			img {
+				width: 4rem;
+			}
+		}
 
-    .Text {
-      p {
-        font-size: 1.3rem;
-      }
-    }
-  }
+		.text {
+			p {
+				font-size: 1.3rem;
+			}
+		}
+	}
 }
 
 @media (max-width: 500px) {
-  .Contact {
-    .Mail,
-    .Telegram {
-      width: 100%;
-    }
+	.contact {
+		.mail,
+		.telegram {
+			width: 100%;
+		}
 
-    .Mail {
-      margin-bottom: 3rem;
-    }
+		.mail {
+			margin-bottom: 3rem;
+		}
 
-    .Text {
-      margin-bottom: 1rem;
+		.text {
+			margin-bottom: 1rem;
 
-      p {
-        font-size: 1rem;
-      }
-    }
-  }
+			p {
+				font-size: 1rem;
+			}
+		}
+	}
 }

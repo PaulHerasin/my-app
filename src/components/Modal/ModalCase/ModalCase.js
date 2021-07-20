@@ -18,6 +18,7 @@ const ModalCase = ({
   description,
   date,
   link,
+  git,
 }) => {
   const dispatch = useDispatch();
   return (
@@ -32,7 +33,7 @@ const ModalCase = ({
           style={{ backgroundImage: `url(${imgMain})` }}
         >
           <h2>{title}</h2>
-          <ButtonLink link={link}></ButtonLink>
+          <ButtonLink link={link}>Перейти на сайт</ButtonLink>
         </div>
 
         <div className={styles.Laprop}>
@@ -62,7 +63,8 @@ const ModalCase = ({
                 <span>Skills:</span> HTML5 / CSS3 / JS
               </li>
             </ul>
-            <ButtonLink link={link}></ButtonLink>
+            <ButtonLink link={link}>Перейти на сайт</ButtonLink>
+            <ButtonLink link={git}>Перейти на GitHub</ButtonLink>
           </div>
         </div>
 

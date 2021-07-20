@@ -29,11 +29,11 @@ const ListSkills = () => {
             amount: 2
           },
           scrollTrigger: {
-            trigger: `.${styles.Skills} li`,
+            trigger: `.${styles.Skills}`,
             start: 'top bottom',
           },
         })
-      });
+      }, 500);
     }
   })
 

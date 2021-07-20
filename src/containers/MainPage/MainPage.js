@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import GsapScrollbar from "../../components/Gsap/GsapScrollbar/GsapScrollbar"
 // import Scrollbar from 'react-smooth-scrollbar';
-import { hideLoader } from "../../redux/actions";
+import { hidePreloader } from "../../redux/actions";
 import MainScreen from "../../components/MainScreen/MainScreen";
 import Portfolio from "../../components/Portfolio/Portfolio";
 import AboutMe from "../../components/AboutMe/AboutMe";
@@ -16,8 +16,8 @@ import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
 class MainPage extends Component {
   componentDidMount() {
     setTimeout(() => {
-      this.props.hideLoader();
-    }, 2000);
+      this.props.hidePreloader();
+    }, 3500);
   }
 
   render() {
@@ -39,7 +39,7 @@ class MainPage extends Component {
 }
 
 const mapDispathToProps = {
-  hideLoader,
+  hidePreloader,
 };
 
 export default connect(null, mapDispathToProps)(MainPage);

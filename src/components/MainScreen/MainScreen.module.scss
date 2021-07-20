@@ -1,13 +1,10 @@
 @import '../../main.scss';
 
 .MainScreen {
-	background-image: url(../../assets/images/clouds-731260.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: bottom;
 	height: 100vh;
 	width: 100%;
 	position: relative;
+	overflow: hidden;
 
 	&::before {
 		position: absolute;
@@ -23,6 +20,19 @@
 			rgba(255, 255, 255, 1) 100%
 		);
 	}
+}
+
+.Background {
+	background-image: url(../../assets/images/clouds-731260.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
 }
 
 .Text {

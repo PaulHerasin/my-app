@@ -1,16 +1,23 @@
-@import "../../../../main.scss";
+@import '../../../../main.scss';
 
 .Link {
-  display: inline-block;
-  cursor: pointer;
-  padding: 1rem 1.5rem;
-  background: rgb(0, 0, 0);
-  color: $light;
-  border: 1px solid rgb(255, 255, 255);
-  transition: 0.5s;
+	display: inline-block;
+	cursor: pointer;
+	padding: 1rem 1.5rem;
+	background: rgb(0, 0, 0);
+	color: $light;
+	border: 1px solid rgb(255, 255, 255);
+	transition: 0.5s;
+	margin-right: 1rem;
+	margin-bottom: 1rem;
 
-  &:hover {
-    color: #ffffffcb;
-    border: 1px solid rgb(180, 180, 180);
-  }
+	&:last-of-type {
+		margin-right: 0;
+		margin-bottom: 0;
+	}
+
+	&:hover {
+		color: #ffffffcb;
+		border: 1px solid rgb(180, 180, 180);
+	}
 }

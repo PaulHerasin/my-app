@@ -9,7 +9,7 @@ const clouds = () => {
     return (
       <div className={styles.Clouds}>
         <div className={styles.Relative}>
-          <div></div>
+          <div className="cloud-1"></div>
           <div></div>
           <div></div>
         </div>
